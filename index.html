@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr M Phiri | Medical Weight Loss Specialist · Ballito, KZN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════
+   DESIGN SYSTEM — Forest Green + White
+   Modern premium private medical clinic
+══════════════════════════════════════ */
+:root{
+  /* Core palette */
+  --forest:    #1B4332;
+  --forest-mid:#2D6A4F;
+  --forest-lt: #40916C;
+  --mint:      #74C69D;
+  --mint-pale: #D8F3DC;
+  --white:     #FFFFFF;
+  --off-white: #F8FAF9;
+  --paper:     #F2F7F4;
+  --gold:      #C9A84C;
+  --gold-lt:   #E8C96A;
+  --charcoal:  #1A1F1C;
+  --slate:     #4A5568;
+  --muted:     #718096;
+  --border:    #E2EBE6;
+  --border-dk: rgba(27,67,50,0.15);
+  /* Typography */
+  --display:   'Playfair Display', Georgia, serif;
+  --body:      'Plus Jakarta Sans', system-ui, sans-serif;
+  /* Spacing */
+  --pad:       5rem;
+  --nav-h:     68px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--white);color:var(--charcoal);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+a{text-decoration:none;}
+
+/* PAGE SYSTEM */
+.page{display:none;min-height:100vh;}
+.page.active{display:block;animation:pgIn .4s cubic-bezier(.22,1,.36,1);}
+@keyframes pgIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+/* ══════════════════════════════════════
+   HOME HERO — centred, full-width
+══════════════════════════════════════ */
+#home-hero{
+  padding-top:var(--nav-h);
+  min-height:100vh;
+  background:linear-gradient(160deg,#0a1f16 0%,var(--forest) 45%,var(--forest-mid) 100%);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  text-align:center;
+}
+.hero-circle{
+  position:absolute;border-radius:50%;
+  background:rgba(116,198,157,0.06);pointer-events:none;
+}
+.hero-circle-1{width:700px;height:700px;top:-200px;right:-200px;}
+.hero-circle-2{width:500px;height:500px;bottom:-150px;left:-150px;background:rgba(116,198,157,0.04);}
+.hero-circle-3{width:300px;height:300px;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(116,198,157,0.03);}
+
+.hero-inner{
+  position:relative;z-index:2;
+  max-width:800px;
+  padding:4rem 2rem 6rem;
+  display:flex;flex-direction:column;align-items:center;
+}
+.hero-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(116,198,157,0.12);
+  border:1px solid rgba(116,198,157,0.25);
+  color:var(--mint);
+  font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:6px 16px;border-radius:50px;
+  margin-bottom:2rem;
+}
+.hero-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--mint);
+  animation:pulse2 2s infinite;flex-shrink:0;
+}
+.hero-h1{
+  font-family:var(--display);
+  font-size:5.5rem;font-weight:700;
+  line-height:1.05;color:#fff;
+  letter-spacing:-1.5px;
+  margin-bottom:1.75rem;
+}
+.hero-h1 em{font-style:italic;color:var(--mint);}
+.hero-sub{
+  font-size:16px;line-height:1.8;
+  color:rgba(255,255,255,0.62);
+  max-width:520px;
+  margin-bottom:2.25rem;
+}
+.hero-btns{
+  display:flex;gap:14px;flex-wrap:wrap;
+  justify-content:center;
+  margin-bottom:3rem;
+}
+.hero-badge-cards{
+  display:flex;
+  flex-direction:row;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:.5rem;
+}
+.hero-badge-card{
+  display:flex;flex-direction:row;align-items:center;
+  gap:9px;
+  background:#fff;
+  border:1.5px solid rgba(255,255,255,0.9);
+  border-radius:12px;
+  padding:.75rem 1.1rem;
+  transition:all .25s;
+  box-shadow:0 2px 14px rgba(0,0,0,0.15);
+  white-space:nowrap;
+}
+.hero-badge-card:hover{
+  border-color:var(--mint);
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(0,0,0,0.18);
+}
+.hero-badge-card-icon{
+  font-size:18px;
+  flex-shrink:0;
+}
+.hero-badge-card-title{font-size:13px;font-weight:700;color:var(--forest);line-height:1.2;}
+.hero-badge-card-sub{font-size:11px;color:var(--muted);font-weight:400;}
+
+.hero-float-card{
+  position:absolute;bottom:3rem;right:4rem;z-index:3;
+  background:#fff;
+  padding:1rem 1.4rem;border-radius:14px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.35);
+  min-width:200px;
+  animation:floatCard 3.5s ease-in-out infinite;
+}
+.hero-float-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--forest-lt);
+  display:inline-block;margin-bottom:.4rem;
+  animation:pulse2 2s infinite;
+}
+.hero-float-label{
+  font-size:9px;font-weight:700;color:var(--muted);
+  letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;
+}
+.hero-float-val{
+  font-family:var(--display);font-size:1.2rem;
+  font-weight:700;color:var(--forest);margin-bottom:3px;
+}
+.hero-float-sub{font-size:11px;color:var(--muted);}
+
+@media(max-width:860px){
+  .hero-h1{font-size:3.5rem;letter-spacing:-0.5px;}
+  .hero-sub{font-size:14px;}
+  .hero-float-card{display:none;}
+  .hero-badge-cards{gap:8px;}
+  .hero-badge-card{padding:.5rem .75rem;}
+}
+
+
+@keyframes floatCard{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+
+/* ══════════════════════════════════════
+   NAVIGATION
+══════════════════════════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:9000;
+  height:var(--nav-h);
+  display:flex;align-items:center;gap:0;
+  padding:0 1.5rem;
+  background:rgba(255,255,255,0.98);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 1px 20px rgba(0,0,0,0.06);
+}
+.nav-logo{
+  display:flex;align-items:center;gap:9px;
+  cursor:pointer;flex-shrink:0;margin-right:1.5rem;
+}
+.nav-logo-mark{
+  width:34px;height:34px;border-radius:9px;
+  background:var(--forest);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-size:15px;font-weight:700;color:#fff;
+}
+.nav-logo-text{line-height:1.2;}
+.nav-logo-text strong{display:block;font-size:12.5px;font-weight:700;color:var(--charcoal);}
+.nav-logo-text small{display:block;font-size:9.5px;color:var(--muted);font-weight:400;margin-top:1px;}
+
+.nav-links{
+  display:flex;align-items:center;gap:2px;
+  flex:1;
+}
+.nav-links a{
+  color:var(--slate);font-size:12px;font-weight:500;
+  cursor:pointer;padding:6px 10px;border-radius:7px;
+  transition:all .2s;white-space:nowrap;
+}
+.nav-links a:hover{color:var(--forest);background:var(--mint-pale);}
+.nav-links a.active{color:var(--forest);background:var(--mint-pale);font-weight:700;}
+
+.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0;}
+.nav-phone{
+  font-size:11.5px;font-weight:700;color:var(--forest);
+  display:flex;align-items:center;gap:5px;
+  padding:5px 10px;border-radius:7px;background:var(--mint-pale);
+}
+.nav-phone::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--forest-lt);animation:pulse2 2s infinite;}
+@keyframes pulse2{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.3);}}
+.nav-cta{
+  background:var(--forest);color:#fff;
+  padding:8px 18px;border-radius:9px;
+  font-size:12px;font-weight:700;
+  cursor:pointer;border:none;
+  transition:all .22s;white-space:nowrap;
+  box-shadow:0 2px 10px rgba(27,67,50,.22);
+}
+.nav-cta:hover{background:var(--forest-mid);transform:translateY(-1px);box-shadow:0 4px 16px rgba(27,67,50,.32);}
+.mob-btn{display:none;background:none;border:none;cursor:pointer;color:var(--charcoal);font-size:22px;padding:4px;margin-left:4px;}
+
+@media(max-width:860px){
+  .nav-links{
+    display:none;
+    position:fixed;top:var(--nav-h);left:0;right:0;
+    background:#fff;flex-direction:column;align-items:stretch;
+    padding:1rem 1.25rem;gap:3px;
+    border-bottom:1px solid var(--border);
+    box-shadow:0 8px 24px rgba(0,0,0,.1);
+    z-index:8999;
+  }
+  .nav-links.open{display:flex!important;}
+  .nav-links a{font-size:14px;padding:10px 12px;}
+  .mob-btn{display:block;}
+  .nav-logo-text small{display:none;}
+  .nav-phone{display:none;}
+}
+
+/* ══════════════════════════════════════
+   SHARED COMPONENTS
+══════════════════════════════════════ */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--forest-lt);margin-bottom:.85rem;
+}
+.eyebrow::before{content:'';display:block;width:20px;height:2px;background:var(--forest-lt);border-radius:2px;}
+
+.display-title{
+  font-family:var(--display);font-size:3rem;font-weight:600;
+  line-height:1.1;color:var(--charcoal);margin-bottom:1rem;
+  letter-spacing:-0.5px;
+}
+.display-title em{font-style:italic;color:var(--forest-mid);}
+.display-title.white{color:#fff;}
+.display-title.white em{color:var(--mint);}
+
+.lead{font-size:16px;line-height:1.75;color:var(--slate);max-width:520px;}
+.lead.white{color:rgba(255,255,255,.72);}
+
+/* Buttons */
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--forest);color:#fff;
+  padding:13px 26px;border-radius:10px;
+  font-size:13px;font-weight:600;
+  cursor:pointer;border:none;transition:all .25s;
+}
+.btn-primary:hover{background:var(--forest-mid);transform:translateY(-2px);box-shadow:0 8px 24px rgba(27,67,50,.3);}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:#fff;
+  padding:13px 26px;border-radius:10px;
+  font-size:13px;font-weight:600;
+  cursor:pointer;border:2px solid rgba(255,255,255,.35);transition:all .25s;
+}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1);}
+.btn-light{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--mint-pale);color:var(--forest);
+  padding:13px 26px;border-radius:10px;
+  font-size:13px;font-weight:600;
+  cursor:pointer;border:none;transition:all .25s;
+}
+.btn-light:hover{background:#c0e8cc;transform:translateY(-2px);}
+.btn-gold{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gold);color:#fff;
+  padding:13px 26px;border-radius:10px;
+  font-size:13px;font-weight:700;
+  cursor:pointer;border:none;transition:all .25s;
+}
+.btn-gold:hover{background:var(--gold-lt);transform:translateY(-2px);}
+
+/* Cards */
+.card{
+  background:#fff;border:1px solid var(--border);
+  border-radius:16px;padding:1.75rem;
+  transition:all .3s;
+}
+.card:hover{border-color:var(--forest-lt);box-shadow:0 8px 32px rgba(27,67,50,.1);transform:translateY(-3px);}
+
+/* Tags / Pills */
+.tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--mint-pale);color:var(--forest);
+  font-size:11px;font-weight:600;letter-spacing:.5px;
+  padding:4px 12px;border-radius:20px;
+}
+
+/* Image wrapper */
+.img-rounded{border-radius:20px;overflow:hidden;position:relative;}
+.img-rounded img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* Section padding */
+.section{padding:var(--pad);}
+.section-sm{padding:3.5rem var(--pad);}
+.bg-white{background:var(--white);}
+.bg-paper{background:var(--paper);}
+.bg-forest{background:var(--forest);}
+.bg-forest-mid{background:var(--forest-mid);}
+.bg-mint-pale{background:var(--mint-pale);}
+
+/* Grid helpers */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
+
+/* Divider */
+.divider{width:60px;height:3px;background:var(--forest-lt);border-radius:3px;margin:1.5rem 0;}
+
+/* Feature list item */
+.feat-item{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:1.1rem;background:#fff;border-radius:12px;
+  border:1px solid var(--border);transition:all .25s;margin-bottom:.75rem;
+}
+.feat-item:hover{border-color:var(--mint);box-shadow:0 4px 16px rgba(27,67,50,.08);transform:translateX(4px);}
+.feat-icon{
+  width:44px;height:44px;border-radius:10px;flex-shrink:0;
+  background:var(--mint-pale);
+  display:flex;align-items:center;justify-content:center;font-size:20px;
+}
+.feat-icon.dk{background:rgba(255,255,255,.1);}
+.feat-title{font-size:14px;font-weight:600;color:var(--charcoal);margin-bottom:3px;}
+.feat-desc{font-size:12.5px;line-height:1.65;color:var(--muted);}
+
+/* Stats strip */
+.stats-strip{
+  background:var(--forest);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.stat-item{
+  padding:2rem 1.5rem;text-align:center;
+  border-right:1px solid rgba(255,255,255,.1);
+}
+.stat-item:last-child{border-right:none;}
+.stat-num{
+  font-family:var(--display);font-size:2.8rem;font-weight:700;
+  color:#fff;display:block;line-height:1;margin-bottom:.3rem;
+}
+.stat-label{font-size:11px;color:var(--mint);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;}
+
+/* Pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;}
+.pc{
+  background:#fff;border:2px solid var(--border);
+  border-radius:20px;padding:2rem;position:relative;
+  transition:all .3s;
+}
+.pc:hover{border-color:var(--forest-lt);box-shadow:0 12px 40px rgba(27,67,50,.12);transform:translateY(-4px);}
+.pc.featured{
+  background:var(--forest);border-color:var(--forest);
+  transform:scale(1.04);box-shadow:0 20px 60px rgba(27,67,50,.3);
+}
+.pc.featured:hover{transform:scale(1.04) translateY(-4px);}
+.pc-ribbon{
+  position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  background:var(--gold);color:#fff;
+  padding:4px 18px;border-radius:0 0 10px 10px;
+  font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  white-space:nowrap;
+}
+.pc-tier{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--forest-lt);margin-bottom:.5rem;}
+.pc.featured .pc-tier{color:var(--mint);}
+.pc-price{
+  font-family:var(--display);font-size:2.8rem;font-weight:700;
+  color:var(--charcoal);line-height:1;margin-bottom:.2rem;
+}
+.pc-price sup{font-size:1.2rem;vertical-align:top;margin-top:.4rem;}
+.pc.featured .pc-price{color:#fff;}
+.pc-weeks{font-size:12px;color:var(--muted);padding-bottom:1rem;border-bottom:1px solid var(--border);margin-bottom:1rem;}
+.pc.featured .pc-weeks{color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.1);}
+.pc-list{list-style:none;margin-bottom:1.5rem;display:flex;flex-direction:column;gap:.65rem;}
+.pc-list li{font-size:13px;color:var(--slate);display:flex;align-items:flex-start;gap:.6rem;line-height:1.5;}
+.pc-list li::before{content:'✓';color:var(--forest-lt);font-weight:700;font-size:12px;flex-shrink:0;margin-top:1px;}
+.pc.featured .pc-list li{color:rgba(255,255,255,.75);}
+.pc.featured .pc-list li::before{color:var(--mint);}
+.pc-btn{
+  width:100%;padding:12px;border-radius:10px;
+  font-size:13px;font-weight:600;cursor:pointer;border:none;transition:all .25s;
+}
+.pc-btn-o{background:var(--mint-pale);color:var(--forest);}
+.pc-btn-o:hover{background:var(--forest);color:#fff;}
+.pc-btn-f{background:#fff;color:var(--forest);}
+.pc-btn-f:hover{background:var(--mint-pale);}
+
+/* Testimonial cards */
+.tcard{
+  background:#fff;border:1px solid var(--border);
+  border-radius:12px;padding:1.1rem;transition:all .3s;
+}
+.tcard:hover{border-color:var(--forest-lt);box-shadow:0 8px 28px rgba(27,67,50,.09);transform:translateY(-3px);}
+.tcard-stars{color:var(--gold);font-size:12px;letter-spacing:2px;margin-bottom:.5rem;}
+.tcard-text{
+  font-size:12px;line-height:1.65;color:var(--slate);
+  margin-bottom:.85rem;font-style:italic;
+}
+.tcard-author{display:flex;align-items:center;gap:9px;}
+.tcard-av{
+  width:34px;height:34px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-size:.85rem;font-weight:700;color:#fff;
+}
+.tcard-name{font-size:12px;font-weight:700;color:var(--charcoal);}
+.tcard-sub{font-size:10.5px;color:var(--muted);margin-top:1px;}
+
+/* Social cards */
+.social-card{
+  display:flex;align-items:center;gap:12px;
+  padding:.9rem 1.25rem;border-radius:12px;
+  cursor:pointer;text-decoration:none;transition:all .25s;
+  border:1px solid rgba(255,255,255,.12);
+}
+.social-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.25);}
+.social-card.ig{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);}
+.social-card.fb{background:#1877F2;}
+.social-card.tt{background:#010101;}
+.social-card.wa{background:#25D366;}
+.social-card-icon{font-size:1.35rem;flex-shrink:0;}
+.social-card-txt strong{display:block;font-size:12.5px;font-weight:700;color:#fff;}
+.social-card-txt span{display:block;font-size:10.5px;color:rgba(255,255,255,.7);margin-top:1px;}
+
+/* CTA band */
+.cta-band{
+  background:var(--forest);
+  padding:4rem var(--pad);
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;
+  position:relative;overflow:hidden;
+}
+.cta-band::before{
+  content:'';position:absolute;right:-80px;top:-80px;
+  width:320px;height:320px;border-radius:50%;
+  background:rgba(116,198,157,.08);
+}
+.cta-band::after{
+  content:'';position:absolute;left:-40px;bottom:-60px;
+  width:200px;height:200px;border-radius:50%;
+  background:rgba(116,198,157,.05);
+}
+.cta-band-text{position:relative;z-index:1;}
+.cta-band-actions{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0;position:relative;z-index:1;}
+
+/* Contact */
+.cc{
+  display:flex;align-items:center;gap:.9rem;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;padding:1rem 1.25rem;margin-bottom:.75rem;
+  transition:all .2s;
+}
+.cc:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);}
+.cc-icon{
+  width:40px;height:40px;border-radius:10px;flex-shrink:0;
+  background:rgba(116,198,157,.2);
+  display:flex;align-items:center;justify-content:center;font-size:17px;
+}
+.cc-lbl{font-size:10px;color:var(--mint);letter-spacing:1px;text-transform:uppercase;font-weight:600;}
+.cc-val{font-size:13.5px;color:#fff;font-weight:500;margin-top:2px;}
+
+/* Form */
+.form-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:2rem;}
+.fg{margin-bottom:.85rem;}
+.fg label{display:block;font-size:11px;font-weight:600;color:rgba(255,255,255,.6);letter-spacing:.5px;margin-bottom:5px;}
+.fg input,.fg select,.fg textarea{
+  width:100%;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);border-radius:9px;
+  padding:11px 14px;color:#fff;font-size:13px;font-family:var(--body);
+  outline:none;transition:all .2s;
+}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.25);}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--mint);background:rgba(255,255,255,.12);}
+.fg select option{background:var(--forest);}
+.fg textarea{resize:vertical;min-height:85px;}
+.fg-lt input,.fg-lt select,.fg-lt textarea{
+  background:var(--paper);border:1.5px solid var(--border);
+  color:var(--charcoal);
+}
+.fg-lt input::placeholder,.fg-lt textarea::placeholder{color:var(--muted);}
+.fg-lt input:focus,.fg-lt select:focus,.fg-lt textarea:focus{border-color:var(--forest-lt);}
+.fg-lt label{color:var(--slate);}
+.fg-lt select option{background:#fff;}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;}
+.form-btn{
+  width:100%;padding:13px;border-radius:10px;border:none;
+  font-size:13px;font-weight:600;cursor:pointer;transition:all .25s;
+  font-family:var(--body);
+}
+.form-btn-forest{background:var(--forest);color:#fff;}
+.form-btn-forest:hover{background:var(--forest-mid);}
+
+/* Booking */
+.bstep{display:flex;gap:1.1rem;padding:1.4rem 0;border-bottom:1px solid var(--border);}
+.bstep:last-child{border-bottom:none;}
+.bstep-num{
+  width:32px;height:32px;border-radius:50%;background:var(--forest);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:#fff;margin-top:2px;
+}
+.bstep h4{font-size:14.5px;font-weight:700;color:var(--charcoal);margin-bottom:3px;}
+.bstep>div>p{font-size:12.5px;color:var(--muted);}
+.atypes{display:flex;gap:.75rem;margin-top:.85rem;flex-wrap:wrap;}
+.atype{
+  flex:1;min-width:100px;padding:.85rem;
+  border:2px solid var(--border);border-radius:12px;
+  cursor:pointer;text-align:center;transition:all .2s;background:#fff;
+}
+.atype.sel{border-color:var(--forest);background:var(--mint-pale);}
+.atype:hover:not(.sel){border-color:var(--forest-lt);}
+.atype-icon{font-size:20px;margin-bottom:4px;}
+.atype-name{font-size:12px;font-weight:700;color:var(--charcoal);}
+.atype-sub{font-size:10.5px;color:var(--muted);margin-top:1px;}
+
+/* Calendar */
+.cal-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem;}
+.cal-hdr h4{font-size:14px;font-weight:700;color:var(--charcoal);}
+.cal-nav{background:none;border:1.5px solid var(--border);border-radius:8px;width:30px;height:30px;cursor:pointer;font-size:15px;color:var(--slate);transition:all .2s;}
+.cal-nav:hover{border-color:var(--forest);color:var(--forest);}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;}
+.cal-dh{text-align:center;font-size:9px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;padding:5px 0;}
+.cal-d{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:12.5px;border-radius:8px;cursor:pointer;transition:all .18s;color:var(--charcoal);font-weight:500;}
+.cal-d:hover:not(.dis):not(.emp){background:var(--mint-pale);color:var(--forest);}
+.cal-d.sel{background:var(--forest);color:#fff;font-weight:700;}
+.cal-d.tod{color:var(--forest);font-weight:700;box-shadow:inset 0 0 0 2px var(--mint);}
+.cal-d.dis{opacity:.25;cursor:not-allowed;}
+.cal-d.emp{cursor:default;}
+
+/* Time slots */
+.tslots{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:.85rem;}
+.tslot{padding:8px;text-align:center;border:1.5px solid var(--border);border-radius:9px;cursor:pointer;font-size:12px;color:var(--charcoal);transition:all .18s;background:#fff;font-weight:500;}
+.tslot:hover:not(.unav){border-color:var(--forest);color:var(--forest);background:var(--mint-pale);}
+.tslot.sel{background:var(--forest);border-color:var(--forest);color:#fff;}
+.tslot.unav{opacity:.25;cursor:not-allowed;}
+
+/* Booking sidebar */
+.book-sidebar{position:sticky;top:calc(var(--nav-h) + 16px);}
+.sum-card{background:var(--forest);border-radius:18px;padding:1.75rem;margin-bottom:1rem;}
+.sum-card h3{font-family:var(--display);font-size:1.3rem;color:#fff;font-weight:600;margin-bottom:1.1rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.1);}
+.si{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.si:last-child{border-bottom:none;}
+.si-lbl{font-size:11px;color:rgba(255,255,255,.5);font-weight:500;}
+.si-val{font-size:12.5px;color:#fff;font-weight:600;}
+.sum-total{display:flex;justify-content:space-between;align-items:center;margin-top:.85rem;padding-top:.85rem;border-top:1px solid rgba(255,255,255,.15);}
+.sum-total span{font-size:12px;color:var(--mint);}
+.sum-total strong{font-family:var(--display);font-size:2rem;color:var(--gold);}
+.book-confirm-btn{
+  width:100%;padding:14px;background:var(--forest-lt);color:#fff;
+  border:none;border-radius:12px;font-size:13px;font-weight:700;
+  cursor:pointer;transition:all .25s;font-family:var(--body);
+}
+.book-confirm-btn:hover{background:var(--mint);color:var(--forest);transform:translateY(-2px);box-shadow:0 6px 20px rgba(27,67,50,.3);}
+
+/* Payment section in booking */
+.pay-inbook{background:var(--paper);border:1.5px solid var(--border);border-radius:18px;padding:1.75rem;margin-top:1.5rem;}
+.pay-inbook h3{font-family:var(--display);font-size:1.5rem;color:var(--charcoal);font-weight:600;margin-bottom:.25rem;}
+.pay-inbook>p{font-size:13px;color:var(--muted);margin-bottom:1.25rem;}
+.ptabs{display:flex;gap:.75rem;margin-bottom:1.25rem;}
+.ptab{flex:1;padding:10px;border:2px solid var(--border);border-radius:10px;cursor:pointer;text-align:center;transition:all .2s;background:#fff;}
+.ptab.sel{border-color:var(--forest);background:var(--mint-pale);}
+.ptab:hover:not(.sel){border-color:var(--forest-lt);}
+.ptab-icon{font-size:19px;margin-bottom:3px;}
+.ptab-name{font-size:11px;font-weight:700;color:var(--charcoal);}
+
+/* Card visual */
+.card-vis{
+  background:linear-gradient(135deg,var(--forest),var(--forest-mid));
+  border-radius:14px;padding:1.3rem;margin-bottom:1.2rem;
+  position:relative;overflow:hidden;min-height:130px;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.card-vis::before{content:'';position:absolute;top:-30px;right:-30px;width:110px;height:110px;border-radius:50%;background:rgba(255,255,255,.07);}
+.card-vis::after{content:'';position:absolute;bottom:-40px;left:-20px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.04);}
+.c-chip{width:32px;height:24px;background:var(--gold);border-radius:5px;}
+.c-num{font-family:var(--display);font-size:1rem;color:#fff;letter-spacing:3px;margin:.75rem 0 .4rem;position:relative;z-index:1;}
+.c-bot{display:flex;justify-content:space-between;position:relative;z-index:1;}
+.c-lbl{font-size:8px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1px;}
+.c-val{font-size:11px;color:#fff;font-weight:600;margin-top:2px;}
+.c-mc{position:absolute;top:1rem;right:1rem;display:flex;}
+.c-mc span{width:24px;height:24px;border-radius:50%;display:block;}
+.c-mc .c1{background:#EB001B;opacity:.9;}
+.c-mc .c2{background:#F79E1B;opacity:.9;margin-left:-8px;}
+.pfi{margin-bottom:.8rem;}
+.pfi label{display:block;font-size:10.5px;font-weight:600;color:var(--slate);letter-spacing:.3px;margin-bottom:4px;}
+.pfi input{width:100%;background:#fff;border:1.5px solid var(--border);border-radius:9px;padding:10px 13px;color:var(--charcoal);font-size:13px;font-family:var(--body);outline:none;transition:all .22s;}
+.pfi input::placeholder{color:var(--muted);}
+.pfi input:focus{border-color:var(--forest);}
+.pfr{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+.secure-badge{display:flex;align-items:center;gap:8px;background:var(--mint-pale);border-radius:8px;padding:9px 12px;margin-top:.65rem;}
+.secure-badge span{font-size:11.5px;color:var(--forest);font-weight:500;}
+.pay-submit{
+  width:100%;background:var(--forest);color:#fff;
+  padding:14px;border-radius:11px;border:none;
+  font-size:13px;font-weight:700;cursor:pointer;
+  transition:all .25s;margin-top:1rem;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--body);
+}
+.pay-submit:hover{background:var(--forest-mid);transform:translateY(-2px);box-shadow:0 6px 22px rgba(27,67,50,.3);}
+.eft-box{background:var(--forest);border-radius:13px;padding:1.25rem;}
+.er{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.er:last-child{border-bottom:none;}
+.er span:first-child{font-size:11.5px;color:rgba(255,255,255,.45);}
+.er span:last-child{font-size:11.5px;color:#fff;font-weight:600;}
+.inc-box{background:var(--mint-pale);border:1px solid rgba(27,67,50,.15);border-radius:12px;padding:1.1rem;margin-top:1rem;}
+.inc-box-title{font-size:11px;font-weight:700;color:var(--forest);letter-spacing:1px;text-transform:uppercase;margin-bottom:.65rem;}
+.inc-box li{font-size:12.5px;color:var(--forest);margin-bottom:4px;list-style:none;}
+.inc-box li::before{content:'✓ ';font-weight:700;}
+
+/* Plan selector pills */
+.plan-pills{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.25rem;}
+.plan-pill{
+  display:flex;flex-direction:column;align-items:center;
+  padding:.9rem 1.1rem;min-width:130px;
+  border:2px solid var(--border);border-radius:12px;
+  cursor:pointer;background:#fff;transition:all .22s;
+}
+.plan-pill.sel{border-color:var(--forest);background:var(--mint-pale);}
+.plan-pill:hover:not(.sel){border-color:var(--forest-lt);}
+.pp-icon{font-size:1.6rem;margin-bottom:3px;}
+.pp-name{font-size:12px;font-weight:700;color:var(--charcoal);}
+.pp-price{font-family:var(--display);font-size:1.1rem;color:var(--forest);font-weight:700;}
+
+/* Success overlay */
+.suc-ov{
+  position:fixed;inset:0;background:rgba(0,0,0,.9);
+  z-index:99999;display:none;align-items:center;justify-content:center;
+  flex-direction:column;text-align:center;padding:2rem;
+  backdrop-filter:blur(14px);
+}
+.suc-ov.show{display:flex;}
+.suc-icon{font-size:4.5rem;margin-bottom:1.3rem;animation:popIn .5s cubic-bezier(.175,.885,.32,1.275);}
+@keyframes popIn{from{transform:scale(0);}to{transform:scale(1);}}
+.suc-title{font-family:var(--display);font-size:2.4rem;color:#fff;font-weight:600;margin-bottom:.4rem;}
+.suc-sub{color:rgba(255,255,255,.62);font-size:14px;max-width:400px;line-height:1.7;margin-bottom:1.75rem;}
+.suc-close{background:var(--forest-lt);color:#fff;padding:12px 30px;border-radius:10px;border:none;cursor:pointer;font-size:13px;font-weight:600;transition:all .25s;font-family:var(--body);}
+.suc-close:hover{background:var(--mint);color:var(--forest);}
+
+/* Footer */
+footer{
+  background:var(--charcoal);padding:2.5rem var(--pad);
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.5rem;flex-wrap:wrap;
+  border-top:3px solid var(--forest);
+}
+.f-logo{font-family:var(--display);font-size:1.1rem;color:#fff;font-style:italic;}
+.f-logo span{color:var(--mint);font-style:normal;}
+.f-links{display:flex;gap:1.25rem;flex-wrap:wrap;}
+.f-links a{font-size:12px;color:rgba(255,255,255,.4);cursor:pointer;transition:color .2s;}
+.f-links a:hover{color:var(--mint);}
+.f-social{display:flex;gap:8px;}
+.f-soc{
+  width:34px;height:34px;border-radius:9px;
+  border:1px solid rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;cursor:pointer;transition:all .22s;
+  text-decoration:none;color:rgba(255,255,255,.5);
+}
+.f-soc:hover{background:var(--forest-lt);border-color:var(--forest-lt);color:#fff;}
+footer p{font-size:11px;color:rgba(255,255,255,.25);}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:960px){
+  :root{--pad:1.5rem;}
+  .grid-2,.grid-4{grid-template-columns:1fr;}
+  .grid-3,.pricing-grid{grid-template-columns:1fr;}
+  .pc.featured{transform:scale(1);}
+  .stats-strip{grid-template-columns:repeat(2,1fr);}
+  .book-sidebar{position:static;}
+  .fr,.pfr{grid-template-columns:1fr;}
+  .tslots{grid-template-columns:repeat(3,1fr);}
+  .cta-band{flex-direction:column;}
+  .cta-band-actions{flex-direction:column;width:100%;}
+  footer{flex-direction:column;text-align:center;}
+  .f-links{justify-content:center;}
+  .f-social{justify-content:center;}
+}
+
+/* ── CONTACT SOCIAL ROWS ── */
+.contact-social-row{
+  display:flex;align-items:center;gap:12px;
+  padding:.75rem 1rem;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  text-decoration:none;
+  transition:all .22s;
+  cursor:pointer;
+}
+.contact-social-row:hover{
+  border-color:var(--forest-lt);
+  background:var(--paper);
+  transform:translateX(4px);
+  box-shadow:0 3px 12px rgba(27,67,50,.08);
+}
+.contact-social-icon{
+  width:38px;height:38px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  border:1px solid var(--border);
+}
+.contact-social-name{font-size:13px;font-weight:700;color:var(--charcoal);}
+.contact-social-handle{font-size:11px;color:var(--muted);margin-top:1px;}
+.contact-social-arrow{margin-left:auto;font-size:14px;color:var(--muted);transition:all .2s;}
+.contact-social-row:hover .contact-social-arrow{color:var(--forest);transform:translateX(3px);}
+
+.ct-soc-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:.6rem 1.1rem;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:9px;
+  color:rgba(255,255,255,.7);
+  font-size:12px;font-weight:600;
+  text-decoration:none;
+  transition:all .22s;
+  white-space:nowrap;
+}
+.ct-soc-btn:hover{
+  background:rgba(255,255,255,.12);
+  border-color:var(--mint);
+  color:#fff;
+  transform:translateY(-2px);
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" onclick="showPage('home')">
+    <div class="nav-logo-mark">P</div>
+    <div class="nav-logo-text">
+      <strong>Dr M Phiri</strong>
+      <small>Medical Weight Loss · Ballito</small>
+    </div>
+  </a>
+
+  <div class="nav-links" id="nav-links">
+    <a onclick="showPage('home')"         data-page="home"         class="active">Home</a>
+    <a onclick="showPage('about')"        data-page="about">About</a>
+    <a onclick="showPage('services')"     data-page="services">Services</a>
+    <a onclick="showPage('testimonials')" data-page="testimonials">Reviews</a>
+    <a onclick="showPage('contact')"      data-page="contact">Contact</a>
+    <a onclick="showPage('booking')"      data-page="booking">Book &amp; Pay</a>
+  </div>
+
+  <div class="nav-right">
+    <div class="nav-phone">065 989 3363</div>
+    <button class="nav-cta" onclick="showPage('booking')">Book Now</button>
+    <button class="mob-btn" onclick="toggleMobile()">☰</button>
+  </div>
+</nav>
+
+<!-- SUCCESS OVERLAY -->
+<div class="suc-ov" id="suc-ov">
+  <div class="suc-icon">✅</div>
+  <div class="suc-title" id="suc-title">Done!</div>
+  <div class="suc-sub" id="suc-sub">We'll be in touch shortly.</div>
+  <button class="suc-close" onclick="closeSuccess()">Back to Website</button>
+</div>
+
+<!-- ══════════════════════════════
+     HOME
+══════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO — full width, centred, vertical layout -->
+  <section id="home-hero">
+    <!-- decorative circles -->
+    <div class="hero-circle hero-circle-1"></div>
+    <div class="hero-circle hero-circle-2"></div>
+    <div class="hero-circle hero-circle-3"></div>
+
+    <div class="hero-inner">
+      <!-- location pill -->
+      <div class="hero-pill">
+        <span class="hero-dot"></span>
+        Ballito · KwaZulu-Natal
+      </div>
+
+      <!-- main heading -->
+      <h1 class="hero-h1">
+        Lose Weight.<br>
+        <em>Keep It Off.</em><br>
+        For Good.
+      </h1>
+
+      <!-- sub text -->
+      <p class="hero-sub">
+        Dr Phiri is a GP specialising in medical weight loss — treating the root cause, not the symptom. Science-backed methods, real results.
+      </p>
+
+      <!-- buttons -->
+      <div class="hero-btns">
+        <button class="btn-gold" onclick="showPage('booking')">Book a Consultation</button>
+        <button class="btn-outline" onclick="showPage('services')">View Programmes</button>
+      </div>
+
+      <!-- trust badge cards — compact horizontal row -->
+      <div class="hero-badge-cards">
+        <div class="hero-badge-card">
+          <div class="hero-badge-card-icon">🎓</div>
+          <div><div class="hero-badge-card-title">MBChB</div><div class="hero-badge-card-sub">Qualified GP</div></div>
+        </div>
+        <div class="hero-badge-card">
+          <div class="hero-badge-card-icon">⚖️</div>
+          <div><div class="hero-badge-card-title">500+ Patients</div><div class="hero-badge-card-sub">Successfully treated</div></div>
+        </div>
+        <div class="hero-badge-card">
+          <div class="hero-badge-card-icon">📹</div>
+          <div><div class="hero-badge-card-title">Virtual Available</div><div class="hero-badge-card-sub">Nationwide</div></div>
+        </div>
+        <div class="hero-badge-card">
+          <div class="hero-badge-card-icon">📞</div>
+          <div><div class="hero-badge-card-title">065 989 3363</div><div class="hero-badge-card-sub">Call or WhatsApp</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- floating card -->
+    <div class="hero-float-card">
+      <div class="hero-float-dot"></div>
+      <div class="hero-float-label">Accepting New Patients</div>
+      <div class="hero-float-val">In-Person &amp; Virtual</div>
+      <div class="hero-float-sub">Ballito · KZN · Nationwide</div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stat-item"><span class="stat-num">500+</span><div class="stat-label">Patients Helped</div></div>
+    <div class="stat-item"><span class="stat-num">8yr</span><div class="stat-label">Medical Experience</div></div>
+    <div class="stat-item"><span class="stat-num">3</span><div class="stat-label">Weight Loss Plans</div></div>
+    <div class="stat-item"><span class="stat-num">98%</span><div class="stat-label">Patient Satisfaction</div></div>
+  </div>
+
+  <!-- WHY MEDICAL WEIGHT LOSS -->
+  <section class="section bg-white">
+    <div class="grid-2" style="gap:4.5rem;">
+      <div>
+        <div class="eyebrow">Why Medical Weight Loss?</div>
+        <h2 class="display-title">The Cause Matters<br>More Than the <em>Scale</em></h2>
+        <p class="lead" style="margin-bottom:1.75rem;">Most diets fail because they treat the symptom — not the cause. Dr Phiri investigates what's actually driving your weight gain and treats that.</p>
+        <div class="feat-item"><div class="feat-icon">🧬</div><div><div class="feat-title">Hormonal Imbalances &amp; PCOS</div><div class="feat-desc">Conditions like PCOS, insulin resistance, and thyroid disorders directly cause weight gain — and diets never fix them.</div></div></div>
+        <div class="feat-item"><div class="feat-icon">💉</div><div><div class="feat-title">GLP-1 Injections &amp; IV Drips</div><div class="feat-desc">Medical-grade injections that suppress appetite, improve metabolism, and accelerate fat loss safely.</div></div></div>
+        <div class="feat-item"><div class="feat-icon">🧪</div><div><div class="feat-title">Full Blood Panel &amp; Gene Testing</div><div class="feat-desc">Comprehensive testing to understand your unique biology and build a truly personalised plan.</div></div></div>
+        <div class="feat-item"><div class="feat-icon">🥗</div><div><div class="feat-title">Personalised Meal &amp; Lifestyle Plans</div><div class="feat-desc">Built around your food preferences, schedule, and medical profile. Not a generic plan.</div></div></div>
+        <div style="margin-top:1.75rem;">
+          <button class="btn-primary" onclick="showPage('services')">View All Programmes →</button>
+        </div>
+      </div>
+      <div>
+        <!-- Stack of images -->
+        <div class="img-rounded" style="height:360px;margin-bottom:1.25rem;">
+          
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+          <div class="img-rounded" style="height:180px;">
+            
+          </div>
+          <div style="background:var(--forest);border-radius:20px;padding:1.5rem;display:flex;flex-direction:column;justify-content:center;">
+            <div style="font-family:var(--display);font-size:2.2rem;font-weight:700;color:#fff;line-height:1;">98%</div>
+            <div style="font-size:12px;color:var(--mint);font-weight:600;margin-top:.4rem;">Patient Satisfaction</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:.3rem;">Based on patient reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div class="cta-band-text">
+      <h2 style="font-family:var(--display);font-size:2.4rem;font-weight:600;color:#fff;line-height:1.2;margin-bottom:.5rem;">
+        "You don't need another diet.<br>
+        <em style="color:var(--mint);">You need proper guidance.</em>"
+      </h2>
+      <p style="color:rgba(255,255,255,.6);font-size:13.5px;">— Dr M Phiri · GP &amp; Medical Weight Loss Specialist · Ballito, KZN</p>
+    </div>
+    <div class="cta-band-actions">
+      <button class="btn-gold" onclick="showPage('booking')">Book &amp; Pay Online</button>
+      <button class="btn-outline" onclick="showPage('services')">View All Programmes</button>
+    </div>
+  </div>
+
+  <!-- 4-STEP APPROACH -->
+  <section class="section bg-paper">
+    <div class="grid-2" style="gap:5rem;">
+      <div>
+        <div class="eyebrow">My Approach</div>
+        <h2 class="display-title">4 Steps to <em>Permanent</em> Results</h2>
+        <div class="divider"></div>
+        <div style="display:flex;flex-direction:column;gap:0;">
+          <div class="bstep"><div class="bstep-num">1</div><div><h4>Book a Consultation</h4><p>In-person in Ballito or virtual — nationwide appointments available.</p></div></div>
+          <div class="bstep"><div class="bstep-num">2</div><div><h4>Blood Tests &amp; Lifestyle Analysis</h4><p>Find the actual cause — hormones, metabolism, genetics, and body composition.</p></div></div>
+          <div class="bstep"><div class="bstep-num">3</div><div><h4>Your Personalised Action Plan</h4><p>Meal plan, exercise guide, GLP-1 therapy if indicated — tailored specifically for you.</p></div></div>
+          <div class="bstep"><div class="bstep-num">4</div><div><h4>Follow-Ups &amp; Maintenance</h4><p>Ongoing support and check-ins to ensure your results last long-term.</p></div></div>
+        </div>
+      </div>
+      <div style="position:relative;">
+        <div class="img-rounded" style="height:500px;background:linear-gradient(160deg,#0d2b1e 0%,#1B4332 50%,#2D6A4F 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;">
+          <div style="font-size:5rem;opacity:0.25;">⚕️</div>
+          <div style="text-align:center;padding:0 2rem;">
+            <div style="font-family:var(--display);font-size:1.8rem;color:rgba(255,255,255,0.15);line-height:1.2;">Medical</div>
+            <div style="font-family:var(--display);font-size:1.8rem;font-style:italic;color:var(--mint);opacity:0.3;line-height:1.2;">Weight Loss</div>
+          </div>
+          <div style="display:flex;gap:1.5rem;opacity:0.2;">
+            <div style="text-align:center;"><div style="font-family:var(--display);font-size:1.8rem;font-weight:700;color:#fff;">500+</div><div style="font-size:9px;color:var(--mint);letter-spacing:1px;text-transform:uppercase;">Patients</div></div>
+            <div style="width:1px;background:rgba(255,255,255,0.2);"></div>
+            <div style="text-align:center;"><div style="font-family:var(--display);font-size:1.8rem;font-weight:700;color:#fff;">98%</div><div style="font-size:9px;color:var(--mint);letter-spacing:1px;text-transform:uppercase;">Satisfied</div></div>
+          </div>
+        </div>
+        <!-- Quote overlay -->
+        <div style="position:absolute;bottom:-1.5rem;left:-1.5rem;background:#fff;border-radius:16px;padding:1.4rem;max-width:280px;box-shadow:0 12px 40px rgba(0,0,0,.12);border-left:4px solid var(--forest);">
+          <p style="font-family:var(--display);font-size:1rem;font-style:italic;color:var(--charcoal);line-height:1.6;">"I investigate <em>why</em> your body holds onto weight — then we treat that."</p>
+          <div style="margin-top:.65rem;font-size:11px;font-weight:700;color:var(--forest);">Dr M Phiri</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMMES PREVIEW -->
+  <section class="section bg-white">
+    <div style="text-align:center;max-width:600px;margin:0 auto 2.5rem;">
+      <div class="eyebrow" style="justify-content:center;">Weight Loss Programmes</div>
+      <h2 class="display-title">Choose Your <em>Plan</em></h2>
+      <p class="lead" style="margin:0 auto;text-align:center;">All plans are medically supervised, once-off payments, and include a full blood panel. Choose what suits your goals and budget.</p>
+    </div>
+    <div class="pricing-grid" id="home-pricing"></div>
+  </section>
+
+  <!-- TESTIMONIALS PREVIEW -->
+  <section class="section bg-paper">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+      <div>
+        <div class="eyebrow">Patient Stories</div>
+        <h2 class="display-title" style="margin-bottom:0;">Real Results, <em>Real People</em></h2>
+      </div>
+      <button class="btn-light" onclick="showPage('testimonials')">Read All Stories →</button>
+    </div>
+    <div class="grid-3" id="home-testimonials"></div>
+  </section>
+
+  <!-- GP ADD-ON — white bg, original card structure + descriptions -->
+  <section class="section bg-white" style="border-top:1px solid var(--border);">
+
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:2rem;flex-wrap:wrap;">
+      <div class="eyebrow" style="margin-bottom:0;">Also Available</div>
+      <span class="tag">GP Add-On Services</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:3.5rem;align-items:start;">
+      <div>
+        <h2 class="display-title" style="font-size:2rem;">General Practice <em>Services</em></h2>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:1.5rem;">Weight loss is our focus. As a fully qualified GP, Dr Phiri can also handle your broader health needs — all in one place.</p>
+        <button class="btn-primary" onclick="showPage('services')">View All Services →</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+
+        <div class="card" style="padding:1.5rem;">
+          <div style="width:44px;height:44px;border-radius:11px;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:.9rem;">🤒</div>
+          <div style="font-size:14px;font-weight:700;color:var(--charcoal);font-family:var(--display);margin-bottom:.35rem;">Acute Illness</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Same-day consultations for infections, flu, injuries and urgent concerns.</div>
+        </div>
+
+        <div class="card" style="padding:1.5rem;">
+          <div style="width:44px;height:44px;border-radius:11px;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:.9rem;">💊</div>
+          <div style="font-size:14px;font-weight:700;color:var(--charcoal);font-family:var(--display);margin-bottom:.35rem;">Chronic Disease</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Ongoing care for diabetes, hypertension, cholesterol and long-term conditions.</div>
+        </div>
+
+        <div class="card" style="padding:1.5rem;">
+          <div style="width:44px;height:44px;border-radius:11px;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:.9rem;">🏥</div>
+          <div style="font-size:14px;font-weight:700;color:var(--charcoal);font-family:var(--display);margin-bottom:.35rem;">Health Screenings</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Preventive checks, cancer screenings and full wellness evaluations.</div>
+        </div>
+
+        <div class="card" style="padding:1.5rem;">
+          <div style="width:44px;height:44px;border-radius:11px;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:.9rem;">📋</div>
+          <div style="font-size:14px;font-weight:700;color:var(--charcoal);font-family:var(--display);margin-bottom:.35rem;">Medical Certificates</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Sick notes, fitness-to-work, insurance reports and referral letters.</div>
+        </div>
+
+        <div class="card" style="padding:1.5rem;">
+          <div style="width:44px;height:44px;border-radius:11px;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:.9rem;">💉</div>
+          <div style="font-size:14px;font-weight:700;color:var(--charcoal);font-family:var(--display);margin-bottom:.35rem;">Vaccinations</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Flu shots, travel vaccines, childhood immunisations and boosters.</div>
+        </div>
+
+        <div class="card" style="padding:1.5rem;">
+          <div style="width:44px;height:44px;border-radius:11px;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:.9rem;">📹</div>
+          <div style="font-size:14px;font-weight:700;color:var(--charcoal);font-family:var(--display);margin-bottom:.35rem;">Telehealth</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Nationwide video consultations — follow-ups, prescriptions and sick notes.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL SECTION — matches contact page style -->
+  <section style="background:var(--paper);padding:4rem var(--pad);border-top:1px solid var(--border);">
+
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;">
+      <div>
+        <div class="eyebrow" style="margin-bottom:.5rem;">Connect With Us</div>
+        <h2 class="display-title" style="font-size:2rem;margin-bottom:.3rem;">Follow <em>Dr Phiri</em></h2>
+        <p style="font-size:13.5px;color:var(--muted);margin-top:.25rem;">Weekly tips, patient stories and health advice across our platforms.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
+
+      <a href="https://instagram.com" target="_blank" style="text-decoration:none;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.5rem 1.25rem;display:flex;flex-direction:column;align-items:flex-start;gap:.75rem;transition:all .25s;"
+         onmouseover="this.style.borderColor='var(--forest-lt)';this.style.boxShadow='0 4px 20px rgba(27,67,50,.1)';this.style.transform='translateY(-3px)'"
+         onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none';this.style.transform='translateY(0)'">
+        <div style="width:44px;height:44px;border-radius:11px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);display:flex;align-items:center;justify-content:center;font-size:20px;">📸</div>
+        <div>
+          <div style="font-size:14px;font-weight:700;color:var(--charcoal);">Instagram</div>
+          <div style="font-size:11.5px;color:var(--muted);margin-top:2px;">@drphiriballito</div>
+        </div>
+        <div style="margin-top:auto;font-size:11px;font-weight:700;color:var(--forest-lt);letter-spacing:.5px;">Follow →</div>
+      </a>
+
+      <a href="https://facebook.com" target="_blank" style="text-decoration:none;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.5rem 1.25rem;display:flex;flex-direction:column;align-items:flex-start;gap:.75rem;transition:all .25s;"
+         onmouseover="this.style.borderColor='var(--forest-lt)';this.style.boxShadow='0 4px 20px rgba(27,67,50,.1)';this.style.transform='translateY(-3px)'"
+         onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none';this.style.transform='translateY(0)'">
+        <div style="width:44px;height:44px;border-radius:11px;background:#1877F2;display:flex;align-items:center;justify-content:center;font-size:20px;">👥</div>
+        <div>
+          <div style="font-size:14px;font-weight:700;color:var(--charcoal);">Facebook</div>
+          <div style="font-size:11.5px;color:var(--muted);margin-top:2px;">Dr M Phiri Weight Loss</div>
+        </div>
+        <div style="margin-top:auto;font-size:11px;font-weight:700;color:var(--forest-lt);letter-spacing:.5px;">Like Page →</div>
+      </a>
+
+      <a href="https://tiktok.com" target="_blank" style="text-decoration:none;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.5rem 1.25rem;display:flex;flex-direction:column;align-items:flex-start;gap:.75rem;transition:all .25s;"
+         onmouseover="this.style.borderColor='var(--forest-lt)';this.style.boxShadow='0 4px 20px rgba(27,67,50,.1)';this.style.transform='translateY(-3px)'"
+         onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none';this.style.transform='translateY(0)'">
+        <div style="width:44px;height:44px;border-radius:11px;background:#111;display:flex;align-items:center;justify-content:center;font-size:20px;">🎵</div>
+        <div>
+          <div style="font-size:14px;font-weight:700;color:var(--charcoal);">TikTok</div>
+          <div style="font-size:11.5px;color:var(--muted);margin-top:2px;">@drphiriballito</div>
+        </div>
+        <div style="margin-top:auto;font-size:11px;font-weight:700;color:var(--forest-lt);letter-spacing:.5px;">Follow →</div>
+      </a>
+
+      <a href="https://wa.me/27659893363" target="_blank" style="text-decoration:none;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.5rem 1.25rem;display:flex;flex-direction:column;align-items:flex-start;gap:.75rem;transition:all .25s;"
+         onmouseover="this.style.borderColor='var(--forest-lt)';this.style.boxShadow='0 4px 20px rgba(27,67,50,.1)';this.style.transform='translateY(-3px)'"
+         onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none';this.style.transform='translateY(0)'">
+        <div style="width:44px;height:44px;border-radius:11px;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:20px;">💬</div>
+        <div>
+          <div style="font-size:14px;font-weight:700;color:var(--charcoal);">WhatsApp</div>
+          <div style="font-size:11.5px;color:var(--muted);margin-top:2px;">065 989 3363</div>
+        </div>
+        <div style="margin-top:auto;font-size:11px;font-weight:700;color:var(--forest-lt);letter-spacing:.5px;">Chat Now →</div>
+      </a>
+
+    </div>
+  </section>
+  <footer><div class="f-logo">Dr M Phiri · <span>Medical Weight Loss Specialist</span></div><div class="f-links"><a onclick="showPage('home')">Home</a><a onclick="showPage('services')">Services</a><a onclick="showPage('booking')">Book &amp; Pay</a></div><div class="f-social"><a class="f-soc" href="https://instagram.com" target="_blank">📸</a><a class="f-soc" href="https://facebook.com" target="_blank">👥</a><a class="f-soc" href="https://wa.me/27659893363" target="_blank">💬</a></div><p>© 2025 Dr M Phiri</p></footer>
+</div>
+
+<!-- ══════════════════════════════
+     SERVICES
+══════════════════════════════ -->
+<div class="page" id="page-services">
+  <!-- Hero with medical image -->
+  <div style="padding-top:var(--nav-h);position:relative;min-height:50vh;display:flex;align-items:center;overflow:hidden;">
+    
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(27,67,50,.95) 0%,rgba(27,67,50,.75) 100%);"></div>
+    <div style="position:relative;z-index:1;padding:5rem var(--pad);">
+      <div class="eyebrow" style="color:var(--mint);">Our Services</div>
+      <h1 style="font-family:var(--display);font-size:3.5rem;font-weight:700;color:#fff;line-height:1.1;margin-bottom:1rem;">Medical Weight Loss<br><em style="color:var(--mint);">Programmes</em></h1>
+      <p style="font-size:14.5px;color:rgba(255,255,255,.65);max-width:480px;line-height:1.75;">Choose the plan that fits your goals. Every programme is built on medical science, not fad diets.</p>
+    </div>
+  </div>
+
+  <section class="section bg-paper">
+    <div style="text-align:center;margin-bottom:2.5rem;">
+      <div class="eyebrow" style="justify-content:center;">Choose Your Programme</div>
+      <h2 class="display-title">Select Your <em>Plan</em></h2>
+    </div>
+    <div class="pricing-grid" id="services-pricing"></div>
+  </section>
+
+  <!-- Included section -->
+  <section class="section bg-white">
+    <div class="grid-2" style="gap:4.5rem;">
+      <div>
+        <div class="eyebrow">Included In Every Plan</div>
+        <h2 class="display-title">What You <em>Get</em></h2>
+        <div class="feat-item"><div class="feat-icon">🩸</div><div><div class="feat-title">Full Blood Panel</div><div class="feat-desc">Comprehensive bloods: hormones, thyroid, metabolic markers, and more.</div></div></div>
+        <div class="feat-item"><div class="feat-icon">📊</div><div><div class="feat-title">Body Composition Scan</div><div class="feat-desc">Beyond weight — fat mass, muscle mass, and metabolic rate analysis.</div></div></div>
+        <div class="feat-item"><div class="feat-icon">📋</div><div><div class="feat-title">Personalised Action Plan</div><div class="feat-desc">Your 8–12 week roadmap with clear, achievable milestones.</div></div></div>
+        <div class="feat-item"><div class="feat-icon">🥗</div><div><div class="feat-title">Meal &amp; Workout Plan</div><div class="feat-desc">Realistic nutrition and exercise guidance tailored to your body.</div></div></div>
+      </div>
+      <div class="img-rounded" style="height:440px;background:linear-gradient(135deg,#1B4332,#40916C,#74C69D);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;">
+        <div style="font-size:5rem;opacity:0.4;">🥗</div>
+        <div style="text-align:center;">
+          <div style="font-family:var(--display);font-size:1.3rem;color:rgba(255,255,255,0.7);font-style:italic;">Nutrition &amp; Wellness</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:.4rem;letter-spacing:1px;text-transform:uppercase;">Personalised Plans</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GP Services -->
+  <section class="section bg-paper" style="border-top:1px solid var(--border);">
+    <div class="eyebrow">Also Available — GP Add-On</div>
+    <h2 class="display-title">General Practice <em>Services</em></h2>
+    <p class="lead" style="margin-bottom:2rem;">Weight loss is our core focus. But Dr Phiri can also manage general health needs throughout your journey.</p>
+    <div class="grid-3">
+      <div class="card"><div style="font-size:1.8rem;margin-bottom:.75rem;">🤒</div><h4 style="font-size:1.1rem;font-family:var(--display);font-weight:600;margin-bottom:.4rem;">Acute Illness</h4><p style="font-size:13px;color:var(--muted);line-height:1.65;">Same-day consultations for infections, flu, and urgent concerns.</p></div>
+      <div class="card"><div style="font-size:1.8rem;margin-bottom:.75rem;">💊</div><h4 style="font-size:1.1rem;font-family:var(--display);font-weight:600;margin-bottom:.4rem;">Chronic Disease</h4><p style="font-size:13px;color:var(--muted);line-height:1.65;">Diabetes, hypertension, cholesterol — ongoing management.</p></div>
+      <div class="card"><div style="font-size:1.8rem;margin-bottom:.75rem;">🏥</div><h4 style="font-size:1.1rem;font-family:var(--display);font-weight:600;margin-bottom:.4rem;">Health Screenings</h4><p style="font-size:13px;color:var(--muted);line-height:1.65;">Preventive checks, cancer screenings, and full health assessments.</p></div>
+      <div class="card"><div style="font-size:1.8rem;margin-bottom:.75rem;">📋</div><h4 style="font-size:1.1rem;font-family:var(--display);font-weight:600;margin-bottom:.4rem;">Medical Certificates</h4><p style="font-size:13px;color:var(--muted);line-height:1.65;">Sick notes, fitness-to-work, insurance reports, referrals.</p></div>
+      <div class="card"><div style="font-size:1.8rem;margin-bottom:.75rem;">💉</div><h4 style="font-size:1.1rem;font-family:var(--display);font-weight:600;margin-bottom:.4rem;">Vaccinations</h4><p style="font-size:13px;color:var(--muted);line-height:1.65;">Flu shots, travel vaccines, immunisations, and boosters.</p></div>
+      <div class="card"><div style="font-size:1.8rem;margin-bottom:.75rem;">📹</div><h4 style="font-size:1.1rem;font-family:var(--display);font-weight:600;margin-bottom:.4rem;">Telehealth</h4><p style="font-size:13px;color:var(--muted);line-height:1.65;">Nationwide virtual appointments — available on request.</p></div>
+    </div>
+  </section>
+
+  <div class="cta-band"><div class="cta-band-text"><h2 style="font-family:var(--display);font-size:2.2rem;color:#fff;font-weight:600;">Ready to choose your <em style="color:var(--mint);">programme?</em></h2><p style="color:rgba(255,255,255,.6);margin-top:.4rem;">In-person in Ballito or virtual nationwide.</p></div><div class="cta-band-actions"><button class="btn-gold" onclick="showPage('booking')">Book &amp; Pay Online</button><button class="btn-outline" onclick="showPage('contact')">Ask a Question</button></div></div>
+  <footer><div class="f-logo">Dr M Phiri · <span>Medical Weight Loss Specialist</span></div><div class="f-links"><a onclick="showPage('home')">Home</a><a onclick="showPage('about')">About</a><a onclick="showPage('booking')">Book &amp; Pay</a></div><div class="f-social"><a class="f-soc" href="https://instagram.com" target="_blank">📸</a><a class="f-soc" href="https://wa.me/27659893363" target="_blank">💬</a></div><p>© 2025 Dr M Phiri</p></footer>
+</div>
+
+<!-- ══════════════════════════════
+     TESTIMONIALS
+══════════════════════════════ -->
+<div class="page" id="page-testimonials">
+  <div style="padding-top:var(--nav-h);background:var(--forest);padding:calc(var(--nav-h) + 3.5rem) var(--pad) 3.5rem;position:relative;overflow:hidden;">
+
+    <div style="position:relative;z-index:1;">
+      <div class="eyebrow" style="color:var(--mint);">Patient Stories</div>
+      <h1 style="font-family:var(--display);font-size:3.5rem;font-weight:700;color:#fff;line-height:1.1;margin-bottom:.75rem;">Real Results, <em style="color:var(--mint);">Real People</em></h1>
+      <p style="font-size:14px;color:rgba(255,255,255,.6);max-width:500px;">Hundreds of patients have transformed their health with Dr Phiri's medical weight loss approach.</p>
+    </div>
+  </div>
+  <section class="section bg-white"><div class="grid-3" id="all-testimonials"></div></section>
+  <section class="section bg-paper">
+    <div class="grid-2" style="gap:4rem;">
+      <div>
+        <div class="eyebrow">The Journey</div>
+        <h2 class="display-title">Starts With <em>One Step</em></h2>
+        <p class="lead" style="margin:1rem 0 1.5rem;">Every patient has a different story. What they share is a commitment to finally getting it right — with proper medical guidance behind them.</p>
+        <button class="btn-primary" onclick="showPage('booking')">Start Your Journey</button>
+      </div>
+      <div class="img-rounded" style="height:340px;background:linear-gradient(135deg,#1B4332,#40916C);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;">
+        <div style="font-size:4.5rem;opacity:0.35;">🏃</div>
+        <div style="text-align:center;padding:0 2rem;">
+          <div style="font-family:var(--display);font-size:1.2rem;color:rgba(255,255,255,0.6);font-style:italic;">"Every journey starts with one step."</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-band"><div class="cta-band-text"><h2 style="font-family:var(--display);font-size:2.2rem;color:#fff;font-weight:600;">Start your own <em style="color:var(--mint);">story.</em></h2><p style="color:rgba(255,255,255,.6);margin-top:.4rem;">Join hundreds who've transformed their health.</p></div><div class="cta-band-actions"><button class="btn-gold" onclick="showPage('booking')">Book Now</button><button class="btn-outline" onclick="showPage('services')">View Programmes</button></div></div>
+  <footer><div class="f-logo">Dr M Phiri · <span>Medical Weight Loss Specialist</span></div><div class="f-links"><a onclick="showPage('home')">Home</a><a onclick="showPage('services')">Services</a><a onclick="showPage('booking')">Book &amp; Pay</a></div><div class="f-social"><a class="f-soc" href="https://instagram.com" target="_blank">📸</a><a class="f-soc" href="https://wa.me/27659893363" target="_blank">💬</a></div><p>© 2025 Dr M Phiri</p></footer>
+</div>
+
+<!-- ══════════════════════════════
+     CONTACT
+══════════════════════════════ -->
+<div class="page" id="page-contact">
+
+  <!-- HERO -->
+  <div style="padding-top:var(--nav-h);background:var(--forest);padding:calc(var(--nav-h) + 3rem) var(--pad) 3rem;">
+    <div class="eyebrow" style="color:var(--mint);">Get In Touch</div>
+    <h1 style="font-family:var(--display);font-size:3.2rem;font-weight:700;color:#fff;line-height:1.1;margin-bottom:.6rem;">
+      Contact <em style="color:var(--mint);">Dr Phiri</em>
+    </h1>
+    <p style="font-size:14px;color:rgba(255,255,255,.55);max-width:500px;line-height:1.75;">
+      Based in Ballito, KZN · Virtual consultations available nationwide · We respond within a few hours.
+    </p>
+  </div>
+
+  <!-- MAIN BODY — 2 columns: contact info left, form right -->
+  <div style="background:var(--paper);padding:3.5rem var(--pad);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;max-width:1100px;margin:0 auto;">
+
+      <!-- LEFT: contact detail cards — spacious individual boxes -->
+      <div>
+        <h2 style="font-family:var(--display);font-size:1.6rem;font-weight:700;color:var(--charcoal);margin-bottom:.3rem;">Our Details</h2>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:1.75rem;">Reach out any way that suits you best.</p>
+
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+
+          <div style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.4rem 1.6rem;display:flex;align-items:center;gap:1.1rem;transition:all .25s;cursor:default;"
+               onmouseover="this.style.borderColor='var(--forest-lt)';this.style.boxShadow='0 4px 20px rgba(27,67,50,.1)'"
+               onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+            <div style="width:48px;height:48px;border-radius:13px;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">📍</div>
+            <div>
+              <div style="font-size:10px;font-weight:700;color:var(--forest-lt);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;">Address</div>
+              <div style="font-size:14px;font-weight:700;color:var(--charcoal);">Ballito, KwaZulu-Natal</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:1px;">4420 · South Africa</div>
+            </div>
+          </div>
+
+          <div style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.4rem 1.6rem;display:flex;align-items:center;gap:1.1rem;transition:all .25s;cursor:default;"
+               onmouseover="this.style.borderColor='var(--forest-lt)';this.style.boxShadow='0 4px 20px rgba(27,67,50,.1)'"
+               onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+            <div style="width:48px;height:48px;border-radius:13px;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">📞</div>
+            <div>
+              <div style="font-size:10px;font-weight:700;color:var(--forest-lt);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;">Phone / WhatsApp</div>
+              <div style="font-size:14px;font-weight:700;color:var(--charcoal);">065 989 3363</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:1px;">Call or WhatsApp — we reply fast</div>
+            </div>
+          </div>
+
+          <div style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.4rem 1.6rem;display:flex;align-items:center;gap:1.1rem;transition:all .25s;cursor:default;"
+               onmouseover="this.style.borderColor='var(--forest-lt)';this.style.boxShadow='0 4px 20px rgba(27,67,50,.1)'"
+               onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+            <div style="width:48px;height:48px;border-radius:13px;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">✉️</div>
+            <div>
+              <div style="font-size:10px;font-weight:700;color:var(--forest-lt);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;">Email</div>
+              <div style="font-size:14px;font-weight:700;color:var(--charcoal);"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="294d5b5941405b404b484545405d46694e44484045074a4644">[email&#160;protected]</a></div>
+              <div style="font-size:12px;color:var(--muted);margin-top:1px;">Response within 24 hours</div>
+            </div>
+          </div>
+
+          <div style="background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.4rem 1.6rem;display:flex;align-items:center;gap:1.1rem;transition:all .25s;cursor:default;"
+               onmouseover="this.style.borderColor='var(--forest-lt)';this.style.boxShadow='0 4px 20px rgba(27,67,50,.1)'"
+               onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+            <div style="width:48px;height:48px;border-radius:13px;background:var(--mint-pale);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🕐</div>
+            <div>
+              <div style="font-size:10px;font-weight:700;color:var(--forest-lt);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;">Consulting Hours</div>
+              <div style="font-size:13.5px;font-weight:700;color:var(--charcoal);">Mon–Fri: 08:00 – 17:00</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:1px;">Saturday: 09:00 – 13:00</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Social media row -->
+        <div style="margin-top:1.75rem;">
+          <div style="font-size:10px;font-weight:700;color:var(--forest);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:.9rem;">Follow Dr Phiri</div>
+          <div style="display:flex;gap:.65rem;flex-wrap:wrap;">
+            <a href="https://instagram.com" target="_blank" style="display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:9px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);text-decoration:none;font-size:12px;font-weight:700;color:#fff;">📸 Instagram</a>
+            <a href="https://facebook.com" target="_blank" style="display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:9px;background:#1877F2;text-decoration:none;font-size:12px;font-weight:700;color:#fff;">👥 Facebook</a>
+            <a href="https://tiktok.com" target="_blank" style="display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:9px;background:#111;border:1px solid #333;text-decoration:none;font-size:12px;font-weight:700;color:#fff;">🎵 TikTok</a>
+            <a href="https://wa.me/27659893363" target="_blank" style="display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:9px;background:#25D366;text-decoration:none;font-size:12px;font-weight:700;color:#fff;">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: compact message form -->
+      <div style="background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:2rem;box-shadow:0 4px 24px rgba(0,0,0,.06);">
+        <h2 style="font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--charcoal);margin-bottom:.25rem;">Send a Message</h2>
+        <p style="font-size:12.5px;color:var(--muted);margin-bottom:1.4rem;">We'll get back to you within 24 hours.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem;">
+          <div class="fg fg-lt"><label>First Name</label><input type="text" id="cf-fname" placeholder="First name"></div>
+          <div class="fg fg-lt"><label>Last Name</label><input type="text" placeholder="Last name"></div>
+        </div>
+        <div class="fg fg-lt" style="margin-bottom:.75rem;"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+        <div class="fg fg-lt" style="margin-bottom:.75rem;"><label>Phone</label><input type="tel" placeholder="0XX XXX XXXX"></div>
+        <div class="fg fg-lt" style="margin-bottom:.75rem;">
+          <label>Subject</label>
+          <select>
+            <option value="">Select a topic</option>
+            <option>Weight Loss Programme</option>
+            <option>Book an Appointment</option>
+            <option>General Enquiry</option>
+            <option>Virtual Consultation</option>
+          </select>
+        </div>
+        <div class="fg fg-lt" style="margin-bottom:1.1rem;">
+          <label>Message</label>
+          <textarea placeholder="How can we help you?" style="min-height:95px;"></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;justify-content:center;" onclick="handleContact()">Send Message ✉️</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MAP ROW -->
+  <div style="background:var(--charcoal);padding:2rem var(--pad);">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:1.25rem;">
+      <div>
+        <div style="font-size:10px;font-weight:700;color:var(--mint);letter-spacing:2px;text-transform:uppercase;margin-bottom:.3rem;">Our Location</div>
+        <h3 style="font-family:var(--display);font-size:1.5rem;font-weight:700;color:#fff;">Ballito, KwaZulu-Natal</h3>
+        <p style="font-size:12.5px;color:rgba(255,255,255,.4);margin-top:.25rem;">Virtual appointments available nationwide</p>
+      </div>
+      <a href="https://maps.google.com/?q=Ballito+KwaZulu-Natal" target="_blank" class="btn-primary" style="text-decoration:none;flex-shrink:0;">Open in Google Maps</a>
+    </div>
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;height:140px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.6rem;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(116,198,157,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(116,198,157,.04) 1px,transparent 1px);background-size:40px 40px;"></div>
+      <div style="position:relative;z-index:1;text-align:center;">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--forest-lt);display:flex;align-items:center;justify-content:center;font-size:15px;margin:0 auto .4rem;box-shadow:0 0 0 7px rgba(64,145,108,.12),0 0 0 14px rgba(64,145,108,.06);">📍</div>
+        <div style="font-family:var(--display);font-size:.9rem;font-weight:700;color:#fff;">Ballito, KZN 4420</div>
+        <div style="font-size:10.5px;color:rgba(255,255,255,.38);margin-top:.2rem;">KwaZulu-Natal · South Africa</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="f-logo">Dr M Phiri · <span>Medical Weight Loss Specialist</span></div>
+    <div class="f-links"><a onclick="showPage('home')">Home</a><a onclick="showPage('services')">Services</a><a onclick="showPage('booking')">Book &amp; Pay</a></div>
+    <div class="f-social"><a class="f-soc" href="https://instagram.com" target="_blank">📸</a><a class="f-soc" href="https://wa.me/27659893363" target="_blank">💬</a></div>
+    <p>© 2025 Dr M Phiri · Ballito, KZN</p>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════
+     BOOKING + PAY
+══════════════════════════════ -->
+<div class="page" id="page-booking">
+  <div style="background:var(--forest);padding:calc(var(--nav-h) + 2.5rem) var(--pad) 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+    <div>
+      <div class="eyebrow" style="color:var(--mint);">Book &amp; Pay Online</div>
+      <h1 style="font-family:var(--display);font-size:2.8rem;font-weight:700;color:#fff;line-height:1.1;margin-bottom:.4rem;">Schedule Your <em style="color:var(--mint);">Appointment</em></h1>
+      <p style="font-size:13.5px;color:rgba(255,255,255,.6);">In-person at Ballito or virtual nationwide · Secure online payment below</p>
+    </div>
+    <div style="text-align:right;"><div style="font-size:10px;color:rgba(255,255,255,.45);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;">Prefer to call?</div><div style="font-size:1.5rem;font-weight:700;color:var(--gold);">065 989 3363</div></div>
+  </div>
+
+  <div style="padding:2.5rem var(--pad);background:var(--paper);display:grid;grid-template-columns:1fr 340px;gap:2.5rem;align-items:start;">
+    <!-- LEFT -->
+    <div>
+      <!-- Step 1: Booking -->
+      <div style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:2rem;margin-bottom:1.5rem;">
+        <h2 style="font-family:var(--display);font-size:1.6rem;font-weight:600;color:var(--charcoal);margin-bottom:1.5rem;">Step 1 — Schedule Your Visit</h2>
+        <div class="bstep">
+          <div class="bstep-num">1</div>
+          <div style="flex:1"><h4>Appointment Type</h4><p>How would you like to meet?</p>
+            <div class="atypes" style="margin-top:.85rem;">
+              <div class="atype sel" onclick="selectAtype(this,'In-Person')"><div class="atype-icon">🏥</div><div class="atype-name">In-Person</div><div class="atype-sub">Ballito</div></div>
+              <div class="atype"     onclick="selectAtype(this,'Virtual')"><div class="atype-icon">📹</div><div class="atype-name">Virtual</div><div class="atype-sub">Nationwide</div></div>
+              <div class="atype"     onclick="selectAtype(this,'Weight Loss')"><div class="atype-icon">⚖️</div><div class="atype-name">Weight Loss</div><div class="atype-sub">Programme</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="bstep">
+          <div class="bstep-num">2</div>
+          <div style="flex:1"><h4>Choose a Date</h4><p>Weekdays only · Saturdays 09:00–13:00</p>
+            <div style="margin-top:.85rem;">
+              <div class="cal-hdr"><button class="cal-nav" onclick="changeMonth(-1)">‹</button><h4 id="cal-title">March 2026</h4><button class="cal-nav" onclick="changeMonth(1)">›</button></div>
+              <div class="cal-grid" id="cal-grid"></div>
+            </div>
+          </div>
+        </div>
+        <div class="bstep">
+          <div class="bstep-num">3</div>
+          <div style="flex:1"><h4>Choose a Time</h4><p>Greyed out = unavailable</p>
+            <div class="tslots" style="margin-top:.85rem;">
+              <div class="tslot"      onclick="pickTime(this,'08:00')">08:00</div>
+              <div class="tslot"      onclick="pickTime(this,'08:30')">08:30</div>
+              <div class="tslot unav">09:00</div>
+              <div class="tslot"      onclick="pickTime(this,'09:30')">09:30</div>
+              <div class="tslot unav">10:00</div>
+              <div class="tslot"      onclick="pickTime(this,'10:30')">10:30</div>
+              <div class="tslot"      onclick="pickTime(this,'11:00')">11:00</div>
+              <div class="tslot unav">11:30</div>
+              <div class="tslot"      onclick="pickTime(this,'13:00')">13:00</div>
+              <div class="tslot"      onclick="pickTime(this,'13:30')">13:30</div>
+              <div class="tslot"      onclick="pickTime(this,'14:00')">14:00</div>
+              <div class="tslot unav">14:30</div>
+              <div class="tslot"      onclick="pickTime(this,'15:00')">15:00</div>
+              <div class="tslot"      onclick="pickTime(this,'15:30')">15:30</div>
+              <div class="tslot"      onclick="pickTime(this,'16:00')">16:00</div>
+              <div class="tslot unav">16:30</div>
+            </div>
+          </div>
+        </div>
+        <div class="bstep">
+          <div class="bstep-num">4</div>
+          <div style="flex:1"><h4>Your Details</h4><p>We'll send a confirmation to your email.</p>
+            <div style="margin-top:.9rem;">
+              <div class="fr" style="margin-bottom:.75rem;">
+                <div class="fg fg-lt"><label>First Name</label><input type="text" id="b-fname" placeholder="First name"></div>
+                <div class="fg fg-lt"><label>Last Name</label><input type="text" placeholder="Last name"></div>
+              </div>
+              <div class="fr" style="margin-bottom:.75rem;">
+                <div class="fg fg-lt"><label>Email</label><input type="email" placeholder="your@email.com"></div>
+                <div class="fg fg-lt"><label>Phone</label><input type="tel" placeholder="0XX XXX XXXX"></div>
+              </div>
+              <div class="fg fg-lt" style="margin-bottom:.75rem;"><label>Reason for Visit</label><select><option value="">Select reason</option><option>Weight Loss Consultation</option><option>General Check-Up</option><option>Follow-Up</option><option>GLP-1 Program</option><option>Blood Test Review</option><option>Sick Note</option><option>Other</option></select></div>
+              <div class="fg fg-lt"><label>Notes (optional)</label><textarea style="background:var(--paper);border:1.5px solid var(--border);border-radius:9px;padding:10px 13px;color:var(--charcoal);font-size:13px;font-family:var(--body);width:100%;outline:none;resize:vertical;min-height:70px;" placeholder="Any information Dr Phiri should know..."></textarea></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Payment -->
+      <div class="pay-inbook">
+        <h3>Step 2 — Pay for Your Programme</h3>
+        <p>Select your plan and complete payment securely below.</p>
+
+        <!-- Plan pills -->
+        <div class="plan-pills">
+          <div class="plan-pill sel" onclick="inbookPickPlan(this,'Budget','3500',8)"><div class="pp-icon">💚</div><div class="pp-name">Budget</div><div class="pp-price">R3,500</div><div style="font-size:10px;color:var(--muted);">8 weeks</div></div>
+          <div class="plan-pill" onclick="inbookPickPlan(this,'Premium','8000',8)"><div class="pp-icon">⭐</div><div class="pp-name">Premium</div><div class="pp-price">R8,000</div><div style="font-size:10px;color:var(--muted);">8 weeks</div></div>
+          <div class="plan-pill" onclick="inbookPickPlan(this,'Executive','15000',12)"><div class="pp-icon">👑</div><div class="pp-name">Executive</div><div class="pp-price">R15,000</div><div style="font-size:10px;color:var(--muted);">12 weeks</div></div>
+          <div class="plan-pill" onclick="inbookPickPlan(this,'Consultation','500',1)"><div class="pp-icon">🩺</div><div class="pp-name">Consult</div><div class="pp-price">R500</div><div style="font-size:10px;color:var(--muted);">Once-off</div></div>
+        </div>
+
+        <!-- Includes -->
+        <div class="inc-box"><div class="inc-box-title">✅ Included — <span id="ib-plan-name">Budget Plan</span></div><ul id="ib-inc-list" style="padding:0;margin:0;"></ul></div>
+
+        <!-- Payment tabs -->
+        <div class="ptabs" style="margin-top:1.25rem;">
+          <div class="ptab sel" onclick="ibPickMethod(this,'card')"><div class="ptib-icon">💳</div><div class="ptib-name">Card</div></div>
+          <div class="ptab"     onclick="ibPickMethod(this,'eft')"><div class="ptib-icon">🏦</div><div class="ptib-name">EFT</div></div>
+          <div class="ptab"     onclick="ibPickMethod(this,'snapscan')"><div class="ptib-icon">📱</div><div class="ptib-name">SnapScan</div></div>
+        </div>
+
+        <!-- Card -->
+        <div id="ib-card-sec">
+          <div class="card-vis">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;"><div class="c-chip"></div><div class="c-mc"><span class="c1"></span><span class="c2"></span></div></div>
+            <div class="c-num" id="ib-d-num">•••• •••• •••• ••••</div>
+            <div class="c-bot"><div><div class="c-lbl">Card Holder</div><div class="c-val" id="ib-d-name">YOUR NAME</div></div><div><div class="c-lbl">Expires</div><div class="c-val" id="ib-d-exp">MM / YY</div></div></div>
+          </div>
+          <div class="pfi"><label>Cardholder Name</label><input type="text" placeholder="As on your card" oninput="document.getElementById('ib-d-name').textContent=this.value||'YOUR NAME'"></div>
+          <div class="pfi"><label>Card Number</label><input type="text" placeholder="1234 5678 9012 3456" maxlength="19" oninput="ibFmtCard(this)"></div>
+          <div class="pfr"><div class="pfi"><label>Expiry</label><input type="text" placeholder="MM / YY" maxlength="7" oninput="ibFmtExp(this)"></div><div class="pfi"><label>CVV</label><input type="text" placeholder="•••" maxlength="4"></div></div>
+          <div class="secure-badge">🔒 <span>256-bit SSL encryption. Card details are never stored.</span></div>
+          <button class="pay-submit" onclick="doBookingAndPay('card')">🔒 Confirm &amp; Pay <span id="ib-btn-amt">R3,500</span></button>
+        </div>
+
+        <!-- EFT -->
+        <div id="ib-eft-sec" style="display:none;">
+          <p style="font-size:13px;color:var(--muted);margin-bottom:.9rem;line-height:1.7;">Use the details below. Reference: <strong style="color:var(--charcoal);">Your Name + Plan</strong></p>
+          <div class="eft-box">
+            <div class="er"><span>Bank</span><span>Standard Bank</span></div>
+            <div class="er"><span>Account Name</span><span>Dr M Phiri Medical Practice</span></div>
+            <div class="er"><span>Account Number</span><span>012 345 6789</span></div>
+            <div class="er"><span>Branch Code</span><span>051001</span></div>
+            <div class="er"><span>Reference</span><span>YourName + Plan</span></div>
+          </div>
+          <button class="pay-submit" style="margin-top:.9rem;" onclick="doBookingAndPay('eft')">📧 Confirm Booking &amp; Email EFT Details</button>
+        </div>
+
+        <!-- SnapScan -->
+        <div id="ib-ss-sec" style="display:none;text-align:center;padding:1.25rem 0;">
+          <div style="font-size:2.5rem;margin-bottom:.6rem;">📱</div>
+          <p style="font-size:14px;font-weight:700;color:var(--charcoal);margin-bottom:.3rem;">Scan to Pay with SnapScan</p>
+          <p style="font-size:12.5px;color:var(--muted);margin-bottom:1.25rem;">Search <strong>"Dr Phiri Ballito"</strong> in the SnapScan app.</p>
+          <div style="width:150px;height:150px;background:var(--paper);border:2px solid var(--border);border-radius:12px;margin:0 auto 1.25rem;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;"><span style="font-size:2rem;">QR</span><span style="font-size:9px;color:var(--muted);font-weight:700;letter-spacing:1px;">DR PHIRI BALLITO</span></div>
+          <button class="pay-submit" style="max-width:300px;margin:0 auto;" onclick="doBookingAndPay('snapscan')">✅ Confirm Booking &amp; Payment Done</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="book-sidebar">
+      <div class="sum-card">
+        <h3>Appointment Summary</h3>
+        <div class="si"><span class="si-lbl">Type</span><span class="si-val" id="sum-type">In-Person</span></div>
+        <div class="si"><span class="si-lbl">Date</span><span class="si-val" id="sum-date">Select a date</span></div>
+        <div class="si"><span class="si-lbl">Time</span><span class="si-val" id="sum-time">Select a time</span></div>
+        <div class="si"><span class="si-lbl">Location</span><span class="si-val">Ballito, KZN</span></div>
+        <div class="si"><span class="si-lbl">Programme</span><span class="si-val" id="sum-plan">Budget Plan</span></div>
+        <div class="sum-total"><span>Total to Pay</span><strong id="sum-total-amt">R3,500</strong></div>
+      </div>
+      <button class="book-confirm-btn" onclick="doBookingAndPay('card')">✅ Confirm Booking</button>
+      <div style="margin-top:.85rem;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.1rem;text-align:center;font-size:11.5px;color:var(--muted);line-height:1.85;">
+        🔒 Secure &amp; confidential<br>
+        📋 Receipt emailed on payment<br>
+        📞 Cancel 24hrs before<br><br>
+        <strong style="color:var(--charcoal);">Questions?</strong><br>
+        <a href="tel:0659893363" style="color:var(--forest);font-weight:700;">065 989 3363</a>
+      </div>
+      <div style="margin-top:.85rem;background:var(--forest);border-radius:14px;padding:1.1rem;text-align:center;">
+        <div style="font-size:10.5px;color:var(--mint);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:.65rem;">Follow Us</div>
+        <div style="display:flex;justify-content:center;gap:8px;">
+          <a href="https://instagram.com" target="_blank" class="f-soc">📸</a>
+          <a href="https://facebook.com"  target="_blank" class="f-soc">👥</a>
+          <a href="https://tiktok.com"    target="_blank" class="f-soc">🎵</a>
+          <a href="https://wa.me/27659893363" target="_blank" class="f-soc">💬</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><div class="f-logo">Dr M Phiri · <span>Medical Weight Loss Specialist</span></div><div class="f-links"><a onclick="showPage('home')">Home</a><a onclick="showPage('services')">Services</a><a onclick="showPage('contact')">Contact</a></div><div class="f-social"><a class="f-soc" href="https://instagram.com" target="_blank">📸</a><a class="f-soc" href="https://wa.me/27659893363" target="_blank">💬</a></div><p>© 2025 Dr M Phiri · Ballito</p></footer>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ─── DATA ─── */
+const PLANS=[
+  {name:'Budget',price:'3,500',raw:3500,weeks:8,feat:false,
+   feats:['Full blood panel','Lifestyle analysis + body composition scan','Action plan','Meal plan','Workout plan','Follow up x 2']},
+  {name:'Premium',price:'8,000',raw:8000,weeks:8,feat:true,badge:'Most Popular',
+   feats:['Full blood panel','Lifestyle analysis + body composition scan','Action plan','Meal plan','2× weight loss drips / month','2× GLP-1 injections / month','Follow up']},
+  {name:'Executive',price:'15,000',raw:15000,weeks:12,feat:false,
+   feats:['Full blood panel','Lifestyle analysis + body composition scan','Meal plan','Gene-testing','Fully tailored GLP-1 programme','Follow up']}
+];
+const TESTS=[
+  {name:'Nomsa K.',sub:'Lost 18kg · Premium Plan',bg:'#2D6A4F',s:5,t:"Dr Phiri completely changed how I think about weight loss. He found out I had insulin resistance — something no one had checked before. Lost 18kg in 3 months."},
+  {name:'Priya M.',sub:'Lost 12kg · Budget Plan',bg:'#C9A84C',s:5,t:"I've tried every diet. Dr Phiri's approach is different — it's medical. He addresses the actual reason you gain weight. Not just telling you to eat less. Incredible."},
+  {name:'Thabo D.',sub:'Lost 22kg · Executive Plan',bg:'#1B4332',s:5,t:"Worth every rand. Gene testing revealed a genetic obesity marker. With the tailored GLP-1 programme I've lost 22kg and feel better than I have in 15 years."},
+  {name:'Liezel V.',sub:'PCOS Weight Loss',bg:'#40916C',s:5,t:"PCOS made weight loss impossible for me. Dr Phiri treated my hormones first. The weight started dropping naturally. I'm genuinely emotional about my progress."},
+  {name:'Craig S.',sub:'Virtual · Cape Town',bg:'#2D6A4F',s:5,t:"I'm in Cape Town and did everything virtually. Seamless — blood tests at a local lab, all consults on video. Dr Phiri is thorough, kind, and professional."},
+  {name:'Fatima A.',sub:'Lost 9kg · Budget Plan',bg:'#74C69D',s:5,t:"Started with the Budget Plan and results exceeded all my expectations. The meal plan was realistic and practical. I recommend Dr Phiri to absolutely everyone."}
+];
+const PF={
+  Budget:['Full blood panel','Lifestyle analysis + body composition scan','Action plan','Meal plan','Workout plan','Follow up x 2'],
+  Premium:['Full blood panel','Lifestyle analysis + body composition scan','Action plan','Meal plan','2× weight loss drips / month','2× GLP-1 injections / month','Follow up'],
+  Executive:['Full blood panel','Lifestyle analysis + body composition scan','Meal plan','Gene-testing','Fully tailored GLP-1 programme','Follow up'],
+  Consultation:['30-minute consultation','Medical assessment','Prescription if required','Referral if needed']
+};
+let curPlan={name:'Budget',amount:'3500',weeks:8};
+
+/* ─── RENDER ─── */
+function renderPricing(id){
+  const el=document.getElementById(id);if(!el)return;
+  el.innerHTML=PLANS.map(p=>`
+    <div class="pc ${p.feat?'featured':''}">
+      ${p.badge?`<div class="pc-ribbon">${p.badge}</div>`:''}
+      <div class="pc-tier">${p.name} Plan</div>
+      <div class="pc-price"><sup>R</sup>${p.price}</div>
+      <div class="pc-weeks">${p.weeks}-Week Programme · Once-off Payment</div>
+      <ul class="pc-list">${p.feats.map(f=>`<li>${f}</li>`).join('')}</ul>
+      <button class="pc-btn ${p.feat?'pc-btn-f':'pc-btn-o'}" onclick="goBook('${p.name}','${p.raw}',${p.weeks})">
+        Select ${p.name} Plan →
+      </button>
+    </div>`).join('');
+}
+function renderTests(id,n){
+  const el=document.getElementById(id);if(!el)return;
+  const list=n?TESTS.slice(0,n):TESTS;
+  el.innerHTML=list.map(t=>`
+    <div class="tcard">
+      <div class="tcard-stars">${'★'.repeat(t.s)}</div>
+      <div class="tcard-text">"${t.t}"</div>
+      <div class="tcard-author">
+        <div class="tcard-av" style="background:${t.bg}">${t.name[0]}</div>
+        <div><div class="tcard-name">${t.name}</div><div class="tcard-sub">${t.sub}</div></div>
+      </div>
+    </div>`).join('');
+}
+function goBook(name,amt,wks){
+  showPage('booking');
+  document.querySelectorAll('.plan-pills .plan-pill').forEach(el=>{
+    el.classList.toggle('sel',el.querySelector('.pp-name').textContent===name);
+  });
+  inbookUpdatePlan(name,String(amt),wks);
+}
+
+/* ─── NAVIGATION ─── */
+function showPage(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const t=document.getElementById('page-'+name);
+  if(t)t.classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.toggle('active',a.dataset.page===name));
+  window.scrollTo(0,0);
+  document.getElementById('nav-links').classList.remove('open');
+  if(name==='booking')renderCal();
+}
+function toggleMobile(){document.getElementById('nav-links').classList.toggle('open');}
+
+/* ─── CALENDAR ─── */
+let calM=new Date().getMonth(),calY=new Date().getFullYear();
+function renderCal(){
+  const mn=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const ct=document.getElementById('cal-title'),cg=document.getElementById('cal-grid');
+  if(!ct||!cg)return;
+  ct.textContent=`${mn[calM]} ${calY}`;
+  const ds=['SUN','MON','TUE','WED','THU','FRI','SAT'];
+  const today=new Date();
+  const fd=new Date(calY,calM,1).getDay();
+  const dim=new Date(calY,calM+1,0).getDate();
+  let html=ds.map(d=>`<div class="cal-dh">${d}</div>`).join('');
+  for(let i=0;i<fd;i++)html+='<div class="cal-d emp"></div>';
+  for(let d=1;d<=dim;d++){
+    const dt=new Date(calY,calM,d);
+    const isT=dt.toDateString()===today.toDateString();
+    const dis=(dt<today&&!isT)||dt.getDay()===0;
+    html+=`<div class="cal-d${isT?' tod':''}${dis?' dis':''}" ${dis?'':'onclick="pickDate(this,'+d+')"'}>${d}</div>`;
+  }
+  cg.innerHTML=html;
+}
+function changeMonth(dir){
+  calM+=dir;
+  if(calM>11){calM=0;calY++;}
+  if(calM<0){calM=11;calY--;}
+  renderCal();
+}
+function pickDate(el,d){
+  document.querySelectorAll('.cal-d').forEach(x=>x.classList.remove('sel'));
+  el.classList.add('sel');
+  const mn=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const sd=document.getElementById('sum-date');
+  if(sd)sd.textContent=`${d} ${mn[calM]} ${calY}`;
+}
+
+/* ─── BOOKING ─── */
+function selectAtype(el,type){
+  el.closest('.atypes').querySelectorAll('.atype').forEach(e=>e.classList.remove('sel'));
+  el.classList.add('sel');
+  const s=document.getElementById('sum-type');if(s)s.textContent=type;
+}
+function pickTime(el,t){
+  document.querySelectorAll('.tslot').forEach(e=>e.classList.remove('sel'));
+  el.classList.add('sel');
+  const s=document.getElementById('sum-time');if(s)s.textContent=t;
+}
+
+/* ─── PAYMENT ─── */
+function inbookPickPlan(el,name,amt,wks){
+  el.closest('.plan-pills').querySelectorAll('.plan-pill').forEach(e=>e.classList.remove('sel'));
+  el.classList.add('sel');
+  inbookUpdatePlan(name,amt,wks);
+}
+function inbookUpdatePlan(name,amt,wks){
+  const raw=parseInt(amt);const fmt=raw.toLocaleString();
+  curPlan={name,amount:String(raw),weeks:wks};
+  const els={sp:'sum-plan',st:'sum-total-amt',pn:'ib-plan-name',ba:'ib-btn-amt'};
+  Object.entries(els).forEach(([k,id])=>{const e=document.getElementById(id);if(e)e.textContent=(k==='sp'?name+' Plan':k==='st'||k==='ba'?'R'+fmt:name+' Plan');});
+  const il=document.getElementById('ib-inc-list');
+  const fs=PF[name]||PF.Budget;
+  if(il)il.innerHTML=fs.map(f=>`<li>${f}</li>`).join('');
+}
+function ibPickMethod(el,m){
+  el.closest('.ptabs').querySelectorAll('.ptab').forEach(t=>t.classList.remove('sel'));
+  el.classList.add('sel');
+  document.getElementById('ib-card-sec').style.display=m==='card'?'block':'none';
+  document.getElementById('ib-eft-sec').style.display=m==='eft'?'block':'none';
+  document.getElementById('ib-ss-sec').style.display=m==='snapscan'?'block':'none';
+}
+function ibFmtCard(inp){
+  let v=inp.value.replace(/\D/g,''),o='';
+  for(let i=0;i<v.length&&i<16;i++){if(i&&i%4===0)o+=' ';o+=v[i];}
+  inp.value=o;
+  const d=document.getElementById('ib-d-num');if(d)d.textContent=o||'•••• •••• •••• ••••';
+}
+function ibFmtExp(inp){
+  let v=inp.value.replace(/\D/g,'');
+  if(v.length>=2)v=v.slice(0,2)+' / '+v.slice(2,4);
+  inp.value=v;
+  const d=document.getElementById('ib-d-exp');if(d)d.textContent=inp.value||'MM / YY';
+}
+function doBookingAndPay(method){
+  const fn=document.getElementById('b-fname');
+  const sd=document.getElementById('sum-date');
+  const st=document.getElementById('sum-time');
+  if(!fn||!fn.value.trim()){alert('Please fill in your name in Step 1.');return;}
+  if(!sd||sd.textContent==='Select a date'){alert('Please select a date.');return;}
+  if(!st||st.textContent==='Select a time'){alert('Please select a time slot.');return;}
+  const fmt=parseInt(curPlan.amount).toLocaleString();
+  if(method==='eft')showSuccess(`Booking Confirmed!\nDate: ${sd.textContent} at ${st.textContent} · ${curPlan.name} Plan (R${fmt}). EFT banking details have been emailed to you.`);
+  else if(method==='snapscan')showSuccess(`Booking Confirmed!\nDate: ${sd.textContent} at ${st.textContent} · ${curPlan.name} Plan (R${fmt}). Thank you, ${fn.value}!`);
+  else showSuccess(`Booking Confirmed + Payment Successful!\nDate: ${sd.textContent} at ${st.textContent} · ${curPlan.name} Plan (R${fmt}). See you then, ${fn.value}!`);
+}
+
+/* ─── CONTACT ─── */
+function handleContact(){
+  const fn=document.getElementById('cf-fname');
+  if(!fn||!fn.value.trim()){alert('Please fill in your name.');return;}
+  showSuccess(`Message Sent!\nThank you ${fn.value}. Dr Phiri's team will respond within 24 hours.`);
+}
+
+/* ─── SUCCESS ─── */
+function showSuccess(msg){
+  const parts=msg.split('\n');
+  document.getElementById('suc-title').textContent=parts[0];
+  document.getElementById('suc-sub').textContent=parts.slice(1).join(' ')||"Dr Phiri's team will be in touch soon.";
+  document.getElementById('suc-ov').classList.add('show');
+}
+function closeSuccess(){
+  document.getElementById('suc-ov').classList.remove('show');
+  showPage('home');
+}
+
+/* ─── INIT ─── */
+renderPricing('home-pricing');
+renderPricing('services-pricing');
+renderTests('home-testimonials',3);
+renderTests('all-testimonials');
+renderCal();
+inbookUpdatePlan('Budget','3500',8);
+</script>
+</body>
+</html>
